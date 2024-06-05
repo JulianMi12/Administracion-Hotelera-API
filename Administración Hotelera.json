@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "c9107da0-05a1-4d4c-930a-bad8e7d1c23b",
+		"name": "Administración Hotelera",
+		"description": "# 🚀 Agencia de Viajes\n\nA continuación encontrará uan documentación de cada uno de los servicios desplegados en este aplicativo.\n\n## 🏨 Hoteles 🛎️\n\n#### **Endpoint 1:** Obtener todos los Hoteles\n\nEste EndPoint devuelve un listado de todos los hoteles existentes en el sistema.\n\n- No requiere de variables.\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel](https://localhost:44347/api/Hotel) \n  \n\n#### **Endpoint 2:** Obtener Hotel por ID\n\nEste EndPoint devuelve los datos de un hotel seleccionado desde la URL.\n\n- Parametro: Id del hotel a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel/1](https://localhost:44347/api/Hotel/1) \n  \n\n#### **Endpoint 3:** Insertar Hotel\n\nEste EndPoint permite ingresar un nuevo hotel al sistema.\n\n``` json\n{\n  \"name\": \"Esaw\",\n  \"city\": \"Dubai\",\n  \"status\": true\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel/](https://localhost:44347/api/Hotel/) \n  \n\n---\n\n#### **Endpoint 4:** Actualizar Hotel\n\nEste EndPoint permite actualizar los datos de un hotel del sistema.\n\n``` json\n{\n  \"id\": \"10\",\n  \"name\": \"Esaw\",\n  \"city\": \"Dubai\",\n  \"status\": false\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel](https://localhost:44347/api/Hotel) \n  \n\n---\n\n## 🏨 Habitaciones 🛏️\n\n#### **Endpoint 1:** Obtener Habitaciones por Hotel\n\nEste EndPoint devuelve un listado de todas las habitaciones de un hotel designado.\n\n- Parametro: Id del hotel a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Room/10](https://localhost:44347/api/Room/10) \n  \n\n#### **Endpoint 2:** Insertar Habitación\n\nEste EndPoint permite ingresar una nueva habitación a un hotel del sistema.\n\n``` json\n{\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Duplex\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Room/](https://localhost:44347/api/Room/) \n  \n\n#### **Endpoint 3:** Actualizar Habitación\n\nEste EndPoint permite actualizar los datos de una habitación del sistema.\n\n``` json\n{\n  \"id\": 8,\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Single\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Room/](https://localhost:44347/api/Room/) \n  \n\n## 🏨 Reservas 📖\n\n#### **Endpoint 1:** Obtener todas las Reservas\n\nEste EndPoint devuelve un listado de todas las reservas existentes en el sistema.\n\n- No requiere de variables.\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Booking](https://localhost:44347/api/Booking) \n  \n\n#### **Endpoint 2:** Detalles por Reserva\n\nEste EndPoint devuelve los detalles de una reserva existente.\n\n- Parametro: Id de la reserva a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/12](https://localhost:44347/api/Booking/12) \n  \n\n# 🚀 Viajero\n\n#### **Endpoint 1:** Obtener habitaciones disponibles\n\nEste EndPoint devuelve un listado de las habitaciones dsponibles para rentar en fechas dadas.\n\n- Parametros:\n    - date_start: DateTime\n    - date_end: DateTime\n    - city: String\n    - capacity: Int\n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/search?date_start=2024-06-10&amp;date_end=2024-06-13&amp;city=Dubai&amp;capacity=3](https://localhost:44347/api/Booking/search?date_start=2024-06-10&date_end=2024-06-13&city=Dubai&capacity=3) \n  \n\n#### **Endpoint 2:** Insertar Reserva\n\nEste EndPoint permite registrar una nueva reserva con los datos de la reserva y del pasajero.\n\n``` json\n{\n  \"id_hotel\": 10,\n  \"id_room\": 8,\n  \"date_start\": \"2024-06-10\",\n  \"date_end\": \"2024-06-13\",\n  \"passenger\": {\n    \"id\": 1000616728,\n    \"first_name\": \"Moises\",\n    \"last_name\": \"Miranda\",\n    \"date_birth\": \"2001-09-09\",\n    \"gender\": \"M\",\n    \"type_doc\": \"CC\",\n    \"email\": \"musicaperrona1@gmail.com\",\n    \"phone\": \"3214553580\",\n    \"emergency_contact\": \"dsa\"\n  }\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/](https://localhost:44347/api/Booking/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25184199"
+	},
+	"item": [
+		{
+			"name": "Agencia de Viajes",
+			"item": [
+				{
+					"name": "Hoteles",
+					"item": [
+						{
+							"name": "Obtener todos los Hoteles",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Hotel",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Hotel"
+									]
+								},
+								"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Hotel por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Hotel/1",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Hotel",
+										"1"
+									]
+								},
+								"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+							},
+							"response": []
+						},
+						{
+							"name": "Insertar Hotel",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"da\",\n  \"city\": \"Dubai\",\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Hotel/",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Hotel",
+										""
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Hotel",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful PUT request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"10\",\n  \"name\": \"Esaw\",\n  \"city\": \"Dubai\",\n  \"status\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Hotel",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Hotel"
+									]
+								},
+								"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Habitaciones",
+					"item": [
+						{
+							"name": "Obtener Habitaciones por Hotel",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Room/10",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Room",
+										"10"
+									]
+								},
+								"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+							},
+							"response": []
+						},
+						{
+							"name": "Insertar Habitación",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Duplex\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Room/",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Habitación",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 8,\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Single\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Room/",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reservas",
+					"item": [
+						{
+							"name": "Obtener todas las Reservas",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Booking",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Booking"
+									]
+								},
+								"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+							},
+							"response": []
+						},
+						{
+							"name": "Detalles por Reserva",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://administracionhotelera.somee.com/api/Booking/12",
+									"protocol": "http",
+									"host": [
+										"administracionhotelera",
+										"somee",
+										"com"
+									],
+									"path": [
+										"api",
+										"Booking",
+										"12"
+									]
+								},
+								"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "# Documentación Funcional\n\nA continuación encontrará uan documentación de cada uno de los servicios desplegados en este aplicativo.\n\n## 🏨 Hoteles 🛎️\n\n#### **Endpoint 1:** Obtener todos los Hoteles\n\nEste EndPoint devuelve un listado de todos los hoteles existentes en el sistema.\n\n- No requiere de variables.\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel](https://localhost:44347/api/Hotel) \n  \n\n#### **Endpoint 2:** Obtener Hotel por ID\n\nEste EndPoint devuelve los datos de un hotel seleccionado desde la URL.\n\n- Parametro: Id del hotel a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel/1](https://localhost:44347/api/Hotel/1) \n  \n\n#### **Endpoint 3:** Insertar Hotel\n\nEste EndPoint permite ingresar un nuevo hotel al sistema.\n\n``` json\n{\n  \"name\": \"Esaw\",\n  \"city\": \"Dubai\",\n  \"status\": true\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel/](https://localhost:44347/api/Hotel/) \n  \n\n---\n\n#### **Endpoint 4:** Actualizar Hotel\n\nEste EndPoint permite actualizar los datos de un hotel del sistema.\n\n``` json\n{\n  \"id\": \"10\",\n  \"name\": \"Esaw\",\n  \"city\": \"Dubai\",\n  \"status\": false\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Hotel](https://localhost:44347/api/Hotel) \n  \n\n---\n\n## 🏨 Habitaciones 🛏️\n\n#### **Endpoint 1:** Obtener Habitaciones por Hotel\n\nEste EndPoint devuelve un listado de todas las habitaciones de un hotel designado.\n\n- Parametro: Id del hotel a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Room/10](https://localhost:44347/api/Room/10) \n  \n\n#### **Endpoint 2:** Insertar Habitación\n\nEste EndPoint permite ingresar una nueva habitación a un hotel del sistema.\n\n``` json\n{\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Duplex\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Room/](https://localhost:44347/api/Room/) \n  \n\n#### **Endpoint 3:** Actualizar Habitación\n\nEste EndPoint permite actualizar los datos de una habitación del sistema.\n\n``` json\n{\n  \"id\": 8,\n  \"id_hotel\": 10,\n  \"status\": true,\n  \"value\": 70000,\n  \"tax\": 0.2,\n  \"type\": \"Single\",\n  \"capacity\": 5,\n  \"location\": \"Piso 4\"\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Room/](https://localhost:44347/api/Room/) \n  \n\n## 🏨 Reservas 📖\n\n#### **Endpoint 1:** Obtener todas las Reservas\n\nEste EndPoint devuelve un listado de todas las reservas existentes en el sistema.\n\n- No requiere de variables.\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Booking](https://localhost:44347/api/Booking) \n  \n\n#### **Endpoint 2:** Detalles por Reserva\n\nEste EndPoint devuelve los detalles de una reserva existente.\n\n- Parametro: Id de la reserva a consultar\n    \n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/12](https://localhost:44347/api/Booking/12)"
+		},
+		{
+			"name": "Viajero",
+			"item": [
+				{
+					"name": "Obtener habitaciones disponibles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://administracionhotelera.somee.com/api/Booking/search?date_start=2024-06-10&date_end=2024-06-13",
+							"protocol": "http",
+							"host": [
+								"administracionhotelera",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"Booking",
+								"search"
+							],
+							"query": [
+								{
+									"key": "date_start",
+									"value": "2024-06-10"
+								},
+								{
+									"key": "date_end",
+									"value": "2024-06-13"
+								},
+								{
+									"key": "city",
+									"value": "Dubai",
+									"disabled": true
+								},
+								{
+									"key": "capacity",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Reserva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_hotel\": 10,\n  \"id_room\": 8,\n  \"date_start\": \"2024-06-10\",\n  \"date_end\": \"2024-06-13\",\n  \"passenger\": {\n    \"id\": 1000616728,\n    \"first_name\": \"Moises\",\n    \"last_name\": \"Miranda\",\n    \"date_birth\": \"2001-09-09\",\n    \"gender\": \"M\",\n    \"type_doc\": \"CC\",\n    \"email\": \"musicaperrona1@gmail.com\",\n    \"phone\": \"3214553580\",\n    \"emergency_contact\": \"dsa\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://administracionhotelera.somee.com/api/Booking/",
+							"protocol": "http",
+							"host": [
+								"administracionhotelera",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"Booking",
+								""
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			],
+			"description": "# Documentación Funcional\n\nA continuación encontrará uan documentación de cada uno de los servicios desplegados en este aplicativo.\n\n#### **Endpoint 1:** Obtener habitaciones disponibles\n\nEste EndPoint devuelve un listado de las habitaciones dsponibles para rentar en fechas dadas.\n\n- Parametros:\n    - date_start: DateTime\n    - date_end: DateTime\n    - city: String\n    - capacity: Int\n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/search?date_start=2024-06-10&amp;date_end=2024-06-13&amp;city=Dubai&amp;capacity=3](https://localhost:44347/api/Booking/search?date_start=2024-06-10&date_end=2024-06-13&city=Dubai&capacity=3) \n  \n\n#### **Endpoint 2:** Insertar Reserva\n\nEste EndPoint permite registrar una nueva reserva con los datos de la reserva y del pasajero.\n\n``` json\n{\n  \"id_hotel\": 10,\n  \"id_room\": 8,\n  \"date_start\": \"2024-06-10\",\n  \"date_end\": \"2024-06-13\",\n  \"passenger\": {\n    \"id\": 1000616728,\n    \"first_name\": \"Moises\",\n    \"last_name\": \"Miranda\",\n    \"date_birth\": \"2001-09-09\",\n    \"gender\": \"M\",\n    \"type_doc\": \"CC\",\n    \"email\": \"musicaperrona1@gmail.com\",\n    \"phone\": \"3214553580\",\n    \"emergency_contact\": \"dsa\"\n  }\n}\n\n ```\n\n> URL ejemplo  \n[https://localhost:44347/api/Booking/](https://localhost:44347/api/Booking/)"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
