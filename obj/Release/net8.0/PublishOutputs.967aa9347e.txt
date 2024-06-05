@@ -1,0 +1,36 @@
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Administracion Hotelera API.exe
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Administracion Hotelera API.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Administracion Hotelera API.deps.json
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Administracion Hotelera API.runtimeconfig.json
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Administracion Hotelera API.pdb
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Dapper.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Google.Protobuf.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\K4os.Compression.LZ4.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\K4os.Compression.LZ4.Streams.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\K4os.Hash.xxHash.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\MySql.Data.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\System.Drawing.Common.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\System.Security.Permissions.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\System.Windows.Extensions.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\ZstdSharp.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\comerr64.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\gssapi64.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\krb5_64.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\krbcc64.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\julia\OneDrive\Documents\Projects\Administracion Hotelera API\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
