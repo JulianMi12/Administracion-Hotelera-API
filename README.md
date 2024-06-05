@@ -1,5 +1,12 @@
 # Administracion-Hotelera-API
 
+# 🪢 Pruebas
+> [!IMPORTANT]
+Para realizar las pruebas más facilmente, puede descargar el archivo `Administración Hotelera.json` el cual es una colección de datos para Postman, ese a su vez incluye documentación y todos los endpoints con URLs y datos de prueba para agilizar el trabajo
+
+![postman](https://github.com/JulianMi12/Administracion-Hotelera-API/assets/71536893/8843be0b-144d-48a5-a20f-96474d6b23db)
+
+
 # 💾 Bases de Datos
 Pueden revisar las bases de datos con las siguientes credenciales de conexión.
 - Metodo: TCP/IP
@@ -199,3 +206,15 @@ Este EndPoint permite registrar una nueva reserva con los datos de la reserva y 
 
 > URL ejemplo  
 [https://localhost:44347/api/Booking/](https://localhost:44347/api/Booking/)
+
+
+
+
+> [!IMPORTANT]
+Proyecto realizado por Julian Miranda.
+2024
+
+![Logo-1](https://github.com/JulianMi12/Administracion-Hotelera/assets/71536893/892b1ce9-d87c-42a2-a10f-a860cafb7811)
+
+
+
